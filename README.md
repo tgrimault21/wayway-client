@@ -1,42 +1,22 @@
-# Basic API routes example
+# Wayway Website
 
-Next.js ships with [API routes](https://nextjs.org/docs/api-routes/introduction) which provides an easy solution to build your own `API`. This example shows how to create multiple `API` endpoints with serverless functions, which can execute independently.
+Adress of the website : http://165.22.76.251
 
-## Deploy your own
+Developed with Next.JS (https://nextjs.org), a React framework.
 
-Deploy the example using [Vercel](https://vercel.com):
+## Library used
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/next.js/tree/canary/examples/api-routes)
+- `SWR` (https://github.com/vercel/swr) for data fetching.
+- `react-map-gl` (https://github.com/visgl/react-map-gl), a React component for Mapbox GL 
 
-## How to use
-
-### Using `create-next-app`
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example api-routes api-routes-app
-# or
-yarn create next-app --example api-routes api-routes-app
-```
-
-### Download manually
-
-Download the example:
-
-```bash
-curl https://codeload.github.com/vercel/next.js/tar.gz/canary | tar -xz --strip=2 next.js-canary/examples/api-routes
-cd api-routes
-```
-
-Install it and run:
+## How to install and run
 
 ```bash
 npm install
-npm run dev
+npm run build
+npm run start
 # or
 yarn
-yarn dev
+yarn build
+yarn start
 ```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
