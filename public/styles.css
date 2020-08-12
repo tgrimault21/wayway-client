@@ -1,0 +1,556 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+body {
+  background-color: #eee;
+  margin: 0;
+  height: 100vh;
+}
+
+/**
+ * Navbar
+**/
+.navbar {
+  background-color: black;
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar img {
+  width: 100px;
+  margin: 0 40px;
+  cursor: pointer;
+}
+
+.navbar a {
+  margin: 0 40px;
+  color: #ff7700;
+  font-family: 'Rajdhani', sans-serif;
+  text-decoration: none;
+  font-size: 140%;
+  font-weight: bold;
+}
+
+/**
+ * Footer
+**/
+.footer {
+  height: 80px;
+  background-color: black;
+  color: #ff7700;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: bold;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px 20px;
+  align-items: center;
+  z-index: 100;
+  position: relative;
+}
+
+.footer__logo {
+  width: 100px;
+  margin: 0 10px;
+}
+
+.footer__icons img {
+  width: 48px;
+  margin: 0 1vw;
+}
+
+.footer a {
+  color: #ff7700;
+}
+
+@media (max-width: 600px) {
+  .footer__icons img {
+    width: 32px;
+  }
+}
+
+
+/**
+ * Header
+**/
+.header {
+  width: 100%;
+  height: 700px;
+  border-bottom: solid 2px #ddd;
+  box-shadow: 0px 15px 41px -12px rgba(0,0,0,0.67);
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 80px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("../public/images/radar-header.jpg") center;
+  background-size: cover;
+  height: 700px;
+}
+
+.header__top {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: fit-content;
+  border-radius: 50%;
+  color: white;
+}
+
+.header__description {
+  text-align: center;
+  flex: 1;
+  margin: 30px;
+}
+
+.header__description h2 {
+  font-family: 'Krona One', sans-serif;
+  color: white;
+  font-size: 200%;
+}
+
+.header__description p {
+  font-family: 'Krona One', sans-serif;
+  color: white;
+  margin: 60px auto;
+  font-size: 100%;
+}
+
+.header__download {
+  width: 200px;
+  height: 80px;
+  box-shadow: 0px 0px 0px 0px rgba(255,255,255,1);
+  transition: box-shadow 0.1s ease;
+  border-radius: 20px;
+  margin: 0 auto;
+  background-color: black;
+  border: solid 2px #aaa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  color: white;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 18px;
+}
+
+.header__download span {
+  margin-right: 10px;
+}
+
+.header__download:hover {
+  box-shadow: 0px 0px 43px -10px rgba(255,255,255,1);
+}
+
+.header__title {
+  font-family: 'Kanit', sans-serif;
+  font-size: 500%;
+}
+
+.header__logo {
+  width: 150px;
+}
+
+.header__mobile {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.header__images {
+  position: relative;
+  width: 350px;
+  margin: 100px auto 0 auto;
+}
+
+.header__smartphone {
+  width: 350px;
+  position: absolute;
+}
+
+.header__screenshot {
+  width: 321px;
+  position: absolute;
+  opacity: 1;
+  transition: opacity 1s ease;
+  top: 83px;
+  left: 15px;
+}
+
+.header__button {
+  position: absolute;
+  z-index: 2;
+  padding: 0;
+  border: none;
+  background: none;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+#left-arrow {
+  top: 345px;
+  left: -27px;
+}
+#left-arrow:hover {
+  transform: translate(-10px);
+}
+
+#right-arrow {
+  top: 345px; 
+  left: 333px;
+}
+#right-arrow:hover {
+  transform: translate(10px);
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.disabled {
+  opacity: 0.3;
+}
+
+.disabled:hover {
+  transform: translate(0) !important;
+}
+
+/**
+ * Presentation
+**/
+#presentation {
+  display: flex;
+  margin: 200px 40px 0 40px;
+}
+
+#out-of-app {
+  display: flex;
+  margin: 0 40px;
+}
+
+#settings {
+  display: flex;
+  margin: 0 40px;
+}
+
+.app__description {
+  margin-top: 100px;
+  font-family: 'Rajdhani', sans-serif;
+  flex: 1;
+  margin-bottom: 50px;
+}
+
+.app__description h2 {
+  text-align: center;
+  font-size: 200%;
+}
+
+.app__description p {
+  text-align: justify;
+  font-size: 140%;
+}
+
+.app__screenshot {
+  flex: 1;
+  text-align: center;
+}
+
+.app__screenshot img {
+  width: 280px;
+  box-shadow: 0px 0px 60px 0px #0099cb;
+}
+
+.appears {
+  transform: translateY(250px);
+  animation: come-in 1s ease forwards;
+}
+
+@keyframes come-in {
+  to { transform: translateY(0); }
+}
+
+/**
+ * Smallest screens
+**/
+@media (max-width: 950px) {
+  #presentation, #settings {
+    flex-direction: column-reverse;
+  }
+
+  .header, #out-of-app {
+    flex-direction: column;
+  }
+
+  .header {
+    height: 1300px;
+  }
+
+  .header::before {
+    height: 1300px;
+  }
+
+  .header__images {
+    margin-top: 0;
+  }
+}
+
+/**
+  * Tablets and smartphones
+**/
+@media (max-width: 538px) {
+  .header__top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__title {
+    margin-top: 0;
+  }
+}
+
+/**
+  * Most smartphones
+**/
+@media (max-width: 413px) {
+  .header__title {
+    font-size: 18vw;
+  }
+
+  .header__images {
+    width: 280px;
+  }
+
+  .header__smartphone {
+    width: 280px;
+  }
+
+  .header__screenshot {
+    width: 257px;
+    top: 66px;
+    left: 12px;
+  }
+
+  #left-arrow {
+    top: 285px;
+    left: -29px;
+  }
+
+  #right-arrow {
+    top: 285px; 
+    left: 266px;
+  }
+
+  .app__description p {
+    text-align: left;
+  }
+}
+
+/**
+  * Small smartphones
+**/
+@media (max-width: 359px) {
+  .app__screenshot img {
+    width: 220px;
+  }
+
+  .header__images {
+    width: 250px;
+  }
+
+  .header__smartphone {
+    width: 250px;
+  }
+
+  .header__screenshot {
+    width: 229px;
+    top: 59px;
+    left: 11px;
+  }
+
+  #left-arrow {
+    left: -30px;
+  }
+
+  #right-arrow {
+    left: 237px;
+  }
+}
+
+
+/*******************************************
+  ************* Back office ****************
+********************************************/
+.radars__table-card {
+  background-color: white;
+  width: fit-content;
+  padding: 20px 10px;
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.55);
+  max-width: 90vw;
+}
+
+.radars__table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-family: 'Nunito', sans-serif;
+}
+
+.radars__table th, .radars__table td {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 15px;
+}
+
+.radars__table td, .radars-list__sort button {
+  cursor: pointer;
+}
+
+.radars__table tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+.radars__table tr:nth-child(even):hover {
+  background-color: #dde;
+}
+
+.radars__table tr:nth-child(odd):hover {
+  background-color: #eef;
+}
+
+.radars__table tr:nth-child(odd) {
+  background-color: #eee;
+}
+
+.radars__table th {
+  background-color: #bbb;
+}
+
+.radars-list__header {
+  display: flex;
+  align-items: center;
+}
+
+.radars-list__sort {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.radars-list__sort button {
+  background: none;
+  border: none;
+  padding: 0;
+  width: 12px;
+}
+
+.radars-list__sort button:active {
+  padding-left: 1px;
+}
+
+.sort--active {
+  cursor: auto !important;
+}
+
+.sort--active svg {
+  fill: white;
+}
+
+.sort--active:active {
+  padding: 0 !important;
+}
+
+.radars-list__filters {
+  margin: 0 10px 20px 10px;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.radars-list__filters label {
+  flex: 1;
+}
+
+.radars-list__filters input {
+  flex: 2;
+  border-radius: 4px;
+  border: solid 1px #222;
+  padding: 4px;
+}
+
+.radars-list__filters input:focus-within {
+  box-shadow: 0 0 10px -3px #666;
+}
+
+.radars-list__pagination {
+  margin: 20px auto 0 auto;
+  width: fit-content;
+  font-family: 'Nunito', sans-serif;
+}
+
+.radars-list__pagination img {
+  width: 10px;
+}
+
+.loading {
+  margin: 30vh auto 0 auto;
+}
+
+.radar__card {
+  margin: 50px auto;
+  padding: 10px;
+  width: 500px;
+  border: solid 1px #ddd;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: white;
+  font-family: 'Nunito', sans-serif;
+}
+
+.radar__card ul {
+  padding-left: 2vw;
+}
+
+.radar__card li {
+  list-style-type: none;
+  margin-bottom: 20px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.radar__card li img {
+  margin-right: 10px;
+}
+
+
+@media (max-width: 550px) {
+  .radar__card {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 430px) {
+  .radars__table--hidden {
+    display: none;
+  }
+}
+
+@media (max-width: 350px) {
+  .radars__table th, .radars__table td {
+    padding: 15px 8px;
+  }
+}

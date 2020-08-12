@@ -1,19 +1,19 @@
-import useSWR from 'swr'
-import Person from '../components/Person'
-
-const fetcher = (url) => fetch(url).then((res) => res.json())
+import Header from '../components/Header'
+import Presentation from '../components/Presentation'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+import Head from 'next/head'
 
 export default function Index() {
-  const { data, error } = useSWR('/api/people', fetcher)
-
-  if (error) return <div>Failed to load</div>
-  if (!data) return <div>Loading...</div>
-
   return (
-    <ul>
-      {data.map((p, i) => (
-        <Person key={i} person={p} />
-      ))}
-    </ul>
+    <div>
+      <Head>
+          <link href="https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css" rel="stylesheet" />
+      </Head>
+      <Navbar />
+      <Header />
+      <Presentation />
+      <Footer />
+    </div>
   )
 }
