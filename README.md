@@ -1,8 +1,8 @@
 # Wayway Website
 
-Adress of the website : http://165.22.76.251
+Url of the website : http://165.22.76.251
 
-Developed with Next.JS (https://nextjs.org), a React framework.
+Developed with Next.JS (https://nextjs.org), a React framework by Vercel.
 
 ## Library used
 
